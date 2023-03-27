@@ -1,0 +1,127 @@
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+.wraeper {
+  min-height: 100%;
+}
+._container {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 50px 20px;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  background-color: black;
+  color: aliceblue;
+}
+.paralax {
+  min-height: 100vh;
+}
+.paralax_body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.paralax_container {
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+.paralax_label {
+  color: burlywood;
+  display: flex;
+  font-size: 18px;
+  letter-spacing: 6px;
+  margin: 0px 0px 30px 0px;
+  align-items: center;
+}
+.paralax_label::before {
+  flex: 0 0 70px;
+  content: "";
+  margin: 0px 30px 0px 0px;
+  background-color: antiquewhite;
+  height: 1px;
+}
+.paralax_title {
+  font-size: 80px;
+}
+.paralax_images {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  z-index: 1;
+}
+.image_paralax_item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.clauds,
+.mountains,
+.people {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.clauds {
+  background: url(img/clouds.jpg) top / cover no-repeat;
+  top: 0;
+}
+.mountains {
+  background: url(img/mountains.png) top / cover no-repeat;
+  top: 15%;
+  z-index: 2;
+}
+.people {
+  background: url(img/human.png) top / cover no-repeat;
+  top: 45%;
+  z-index: 3;
+}
+.content{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.516);
+    position: relative;
+    z-index: 2;
+}
+.content_container h1{
+font-size: 50px;
+margin: 0px 0px 30px 0px;
+}
+.content_text{
+    font-size: 26px;
+    line-height: 150%;
+}
+.content_text p{
+    margin: 0px 0px 30px 0px;
+}
+.content::before {
+    pointer-events: none;
+    border-radius: 20%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    transform: translate(0px, -100%);
+    background: linear-gradient(180deg, rgba(11, 29, 38));
+
+}
+@media (max-aspect-ratio :3/2){
+    .people{
+        background-position: 20% top;
+    }
+}
